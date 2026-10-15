@@ -5,7 +5,17 @@ from google import genai
 from google.genai import errors
 
 load_dotenv()
-client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+def _get_api_key():
+    try:
+        import streamlit as st
+        if "GEMINI_API_KEY" in st.secrets:
+            return st.secrets["GEMINI_API_KEY"]
+    except Exception:
+        pass
+    return os.environ.get("GEMINI_API_KEY")
+
+client = genai.Client(api_key=_get_api_key())
+
 
 MODELE = "gemini-3.5-flash-lite"
 
