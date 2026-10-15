@@ -2,7 +2,7 @@
 
 An automated red-teaming tool that tests whether an AI-powered HR assistant 
 can be tricked into leaking confidential data — and measures how well defenses stop it.
-
+demo :  https://red-team-agent-qz5nlqrtqczqfac5xkoyhk.streamlit.app/
 ## The problem
 AI assistants connected to internal documents (salaries, addresses, secret projects) 
 can be manipulated into revealing confidential information through clever prompts.
