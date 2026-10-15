@@ -21,7 +21,7 @@ def charger_documents():
 def contruire_base():
     """ Range les documents dans Chroma"""
     documetns = charger_documents()
-    client = chromadb.Client()
+    client = chromadb.EphemeralClient()
     collection = client.create_collection(name="documents")
 
     collection.add(
