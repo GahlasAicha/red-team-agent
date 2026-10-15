@@ -1,6 +1,6 @@
 from pathlib import Path
 import chromadb
-from sympy import re
+
 
 
 def charger_documents():
